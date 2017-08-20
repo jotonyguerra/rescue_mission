@@ -1,0 +1,13 @@
+<h1> New Question </h1>
+
+<%= form_for(@question) do |f| %>
+  <div>
+    <%= f.label :title, class: "new_question_title" %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description, class: "new_question_description" %>
+    <%= f.text_field :description %>
+  </div>
+  <%= f.submit "Create new question" %>
+<%end%>

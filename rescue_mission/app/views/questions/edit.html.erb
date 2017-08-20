@@ -1,0 +1,19 @@
+<h1> Edit Question </h1>
+
+<%= form_for(@question) do |f| %>
+  <div>
+    <%= f.label :title, class: "new_question_title" %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description, class: "new_question_description" %>
+    <%= f.text_field :description %>
+  </div>
+  <%= f.submit "Update Question" %>
+
+<%end%>
+
+<%= link_to "Delete",
+             question_path(@question),
+                            method: :delete,
+                            data: { confirm: 'Are you sure?' } %>

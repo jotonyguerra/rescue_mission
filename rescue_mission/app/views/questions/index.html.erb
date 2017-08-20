@@ -1,0 +1,7 @@
+<h1> Questions </h1>
+
+<% @questions.each do |q| %>
+  <li><%= q.title %><%=  link_to "show", question_path(q) %> </li>
+<%end%>
+
+<%= link_to "Submit a Question", new_question_path(@question) %>
